@@ -1,0 +1,174 @@
+<section id="team">
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8">
+            <div class="section-title text-center mt-80 mb-70">
+                <h2>Clinical and Scientific Advistory Team</h2>
+
+            </div>
+        </div>
+    </div>
+    <div id="clinical-team"></div>
+
+    <!-- <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8">
+            <div class="section-title text-center mt-30 mb-70">
+                <h2>Greenlight Team</h2>
+
+            </div>
+        </div>
+    </div>
+    <div id="greenlight-team"></div> -->
+
+</div>
+</section>
+
+<script src="js/tmpl.min.js" type="text/javascript"></script>
+
+{% raw %}
+<script type="text/x-tmpl" id="team-tmpl">
+  {% for (let i=0; i < o.length; i++ ) { %}
+    {% const chunk = o[i]; %}
+      <div class="row team-active">
+      {% for (let j=0; j < chunk.length; j++ ) { %}
+        {% const member = chunk[j]; %}
+          <div class="col-xl-3">
+            <div class="single-team mb-30">
+                          <div class="team-thumb">
+                              <div class="brd" style="max-width: 300px; background-position: center;background-image:url({%= member.image %});height:250px;width:100%;background-repeat:no-repeat;background-size:cover;">
+
+                                  <!-- <img src="{%= member.image %}" alt="{%= member.alt %}"> -->
+                              </div>
+
+                          </div>
+                          <div class="team-info">
+                              <h4>{%= member.name %}</h4>
+                              <span>{%= member.title %}</span>
+                          </div>
+            </div>
+          </div>
+          {% } %}
+        </div>
+        {% } %}
+</script>
+
+<script type="text/x-tmpl" id="team-tmpl2">
+  {% for (let i=0; i < o.length; i++ ) { %}
+    {% const chunk = o[i]; %}
+      <div class="row team-active">
+      {% for (let j=0; j < chunk.length; j++ ) { %}
+        {% const member = chunk[j]; %}
+          <div class="col-xl-4">
+            <div class="single-team mb-30">
+                          <div class="team-thumb">
+                              <div class="brd" style="background-image:url({%= member.image %});height:300px;width:100%;background-repeat:no-repeat;background-size:cover;">
+
+                                  <!-- <img src="{%= member.image %}" alt="{%= member.alt %}"> -->
+                              </div>
+
+                          </div>
+                          <div class="team-info">
+                              <h4>{%= member.name %}</h4>
+                              <span>{%= member.title %}</span>
+                          </div>
+            </div>
+          </div>
+          {% } %}
+        </div>
+        {% } %}
+</script>
+
+
+<script type="text/javascript">
+
+function chunk(array, chunkSize) {
+  const chunks = []
+  let chunk = []
+  for (let i = 0; i < array.length; i++) {
+      chunk.push(array[i])
+
+    if ((i % chunkSize +1) == chunkSize) {
+      chunks.push(chunk)
+      chunk = []
+    }
+  }
+  if (chunk.length !== 0) chunks.push(chunk)
+  return chunks
+}
+
+    const team = [
+      {
+        name: 'Devdutta Sanvai, MD, MBA',
+        title: 'Vice President for Population Health Management, Duke Health',
+        image: 'img/team/sangvai.jpg',
+        alt: 'Dr. Devdutta Sangvai',
+        about: ''
+      },
+      {
+        name: 'Becky Smith, MD',
+        title: 'Medical Director for Infection Prevention at Duke Health',
+        image: 'img/team/smith.jpg',
+        alt: 'Dr. Becky Smith',
+        about: ''
+      },
+      {
+        name: 'Raquel Bartz, MD, MCCi',
+        title: 'Chief of Critical Care at Duke Health',
+        image: 'img/team/bartz.jpg',
+        alt: 'Dr. Raquel Bartz',
+        about: ''
+      },
+      {
+        name: 'Manesh Patel, MD',
+        title: 'Professor & Chief of Cardiology at Duke Health',
+        image: 'img/team/patel.jpg',
+        alt: 'Dr. Manesh Patel',
+        about: ''
+      },
+      {
+        name: 'Mark Sendak, MD, MPH',
+        title: 'Data Science Lead at the Duke Institute for Health Innovation',
+        image: 'img/team/sendak.jpg',
+        alt: 'Dr. Mark Sendak',
+        about: ''
+      },
+      {
+        name: 'Suresh Balu, MS, MBA',
+        title: 'Director of the Duke Institute for Health Innovation',
+        image: 'img/team/balu.jpg',
+        alt: 'Suresh Balu',
+        about: ''
+      }
+    ]
+
+  document.getElementById('clinical-team').innerHTML = tmpl('team-tmpl', chunk(team, 4))
+
+    const team2 = [
+      {
+        name: 'Joey Webb',
+        title: 'Head of Schools',
+        image: 'img/team/webb.jpg',
+        alt: 'Joey Webb',
+        about: ''
+      },
+      {
+        name: 'Faraz Yashar',
+        title: 'Cheif Executive Officer',
+        image: 'img/team/yashar.jpg',
+        alt: 'Faraz Yashar',
+        about: ''
+      },
+      {
+        name: 'Farhan Banani',
+        title: 'Operations',
+        image: 'img/team/banani.jpg',
+        alt: 'Farhan Banani',
+        about: ''
+      }
+    ]
+
+  // document.getElementById('greenlight-team').innerHTML = tmpl('team-tmpl2', chunk(team2, 4))
+
+
+</script>
+{% endraw %}

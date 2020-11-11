@@ -1,7 +1,7 @@
 # --- Basic options --- #
 
 # Name of website
-title: My website
+title: Greenlight Ed
 
 # Short description of your site
 description: A virtual proof that I'm awesome
@@ -179,7 +179,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Vancouver"
+timezone: "America/New_York"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -223,4 +223,3 @@ plugins:
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
-
