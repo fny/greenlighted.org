@@ -73,20 +73,22 @@
 
   <main>
   <style>
-@media only screen and (max-width: 600px) {
-  .app-intro-image {
-    display: none;
+  .pipedriveWebForms {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 50px;
   }
-}
+  @media screen and (min-width: 600px) {
+    .pipedriveWebForms {
+      margin-top: 150px;
+    }
+  }
 </style>
-
-<section id="parallax" class="slider-area slider-bg2 second-slider-bg d-flex fix" style="background-image: url(img/bg/header-bg.png); background-position:right 0; background-repeat: no-repeat; background-size: 65%;">
+<section id="parallax" class="slider-area slider-bg2 second-slider-bg d-flex fix" style="background-image: url(/img/bg/header-bg.png); background-position:right 0; background-repeat: no-repeat; background-size: 65%;">
   <div class="slider-shape ss-one layer" data-depth="0.10"><img src="/img/shapes/green-shapes1.png" alt="shape"></div>
 
   <div class="slider-shape ss-eight layer" data-depth="0.50"></div>
-
-
-
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
@@ -95,26 +97,21 @@
             <li>Greenlight</li>
             <li>Symptom Monitoring and Community Empowerment</li>
           </ul>
-          <h2 data-animation="fadeInUp" data-delay=".4s">COVID-19 Support<br /><span>For Schools</span></h2>
+          <h2 data-animation="fadeInUp" data-delay=".4s">COVID-19 Support<br /><span>For NC Charters</span></h2>
           <p data-animation="fadeInUp" data-delay=".6s">Monitor the well-being of students and staff. Get the social support they need. Guidance from top physicians to support your school's operations.
           </p>
-          <div class="slider-btn mt-30 mb-30">
-            <a href="https://calendly.com/greenlighted" class="btn ss-btn" data-animation="fadeInUp" data-delay=".8s">Schedule a Meeting</a>
-          </div>
-
           <div class="mt-30">
-            <b class="color-dark">POWERED BY </b> <a href="https://pandemicresponsenetwork.org"><img alt="Duke Health" src="img/prn.png" style="height:80px; padding-left: 20px;" /></a><br /><br />
+            <b class="color-dark">POWERED BY </b> <a href="https://pandemicresponsenetwork.org"><img alt="Duke Health" src="/img/prn.png" style="height:80px; padding-left: 20px;" /></a><br /><br />
             <b class="color-dark">AND EXPERTISE AT
               <img alt="Duke Health" src="/img/duke.png" style="height:50px; padding-left: 20px;" />
             </b>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 app-intro-image">
-        <img src="/img/bg/mobile.png" alt="shape" class="s-img">
-        <!-- <div style="position: relative; top: -1">
-          <a href="https://www.youtube.com/watch?v=ZXijKCJdCAk" class="popup-video"><img src="/img/bg/play-btn.png" alt="play-btn.png"></a>
-        </div> -->
+      <div class="col-lg-6">
+        <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/2Z6x7JM4waeolvWffDRhUOewPg1gvDbHFO8B6znky3ZmmAKCv2qYsV4VcFGt7ztKz">
+          <script src="https://webforms.pipedrive.com/f/loader"></script>
+        </div>
       </div>
     </div>
   </div>
@@ -293,7 +290,7 @@
 					These same protocols have been used to keep Duke University and Duke Hospital operating throughout the pandemic.
 				 </p>
 
-				 <a class="btn ss-btn" href="https://calendly.com/greenlighted">Schedule a Meeting</a>
+				 <a class="btn ss-btn" href="#">Reserve Your Spot</a>
 
 				 <!-- <div class="choose-btn mt-30">
 					<a href="#"><span class="icon"><img src="/img/icon/apple-icon.png" alt="apple-icon"></span>
@@ -620,7 +617,7 @@ function chunk(array, chunkSize) {
 
 </section>
 
-</main>
+  </main>
 
   <footer class="footer-bg footer-p pt-60" style="background-image: url(/img/bg/f-bg.png); background-position: center top; background-size: auto;background-repeat: no-repeat;">
 
